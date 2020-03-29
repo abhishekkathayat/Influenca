@@ -13,5 +13,17 @@
     <string name="dummy_name">John Doe</string>
     <string name="drawer_open">open_drawer</string>
     <string name="drawer_close">close_drawer</string>
+
     <string name="dummy_mail">johndoe23@gmail.com</string>
+    <string name="personal_info">Personal Information</string>
+    <string name="phno">Phone Number</string>
+    <string name="phno_hldr">+91 7274738734</string>
+    <string name="city">City</string>
+    <string name="city_hldr">Dehradun</string>
+    <string name="options_video">Videos</string>
+    <string name="total_earning">Total Earning</string>
+    <string name="earning_hold">$2300</string>
+    <string name="total_videos">Total Videos</string>
+    <string name="novideo_holder">23</string>
+    <string name="vddetails">Details</string>
 </resources>

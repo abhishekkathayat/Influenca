@@ -33,11 +33,11 @@
 
         <TextView
             android:id="@+id/TextView_2"
-            android:fontFamily="@font/altoy_font"
             android:layout_below="@id/TextView_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="15sp"
+            android:textStyle="bold"
             android:layout_marginBottom="20dp"
             android:textColor="@android:color/black"
             android:text="@string/dummy_mail"
@@ -45,5 +45,154 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/Relative_2"
+        app:layout_constraintTop_toBottomOf="@id/Relative_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/option_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/altoy_font"
+            android:textSize="20sp"
+            android:text="@string/personal_info"
+            android:textColor="@android:color/black"/>
+
+        <RelativeLayout
+            android:id="@+id/subrelative_1"
+            android:layout_below="@id/option_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/option_phno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phno"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/option_phnohldr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phno_hldr"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/option_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/option_phnohldr"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/option_cityhldr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_hldr"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/option_phnohldr"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/option_1"
+            android:layout_below="@id/subrelative_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/altoy_font"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:text="@string/options_video"
+            android:textColor="@android:color/black"/>
+
+        <RelativeLayout
+            android:layout_below="@id/option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/option_earning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_earning"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/option_earninghldr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/earning_hold"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/option_videos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_videos"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/option_earning"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/option_videohldr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/novideo_holder"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/option_earning"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/vddetail"
+                android:padding="0dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="@string/vddetails"
+                android:layout_below="@id/option_videohldr"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAllCaps="false"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
