@@ -1,4 +1,4 @@
-## Influenca
+# Influenca
 
 ### Introduction
 A Simple Influencer App which was developed by me as an Internship assignment.<br/>
