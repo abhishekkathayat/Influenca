@@ -4,11 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -43,21 +41,21 @@ public class HomeFragment extends Fragment {
     }
 
     private void videosData() {
-        VideoModel videoModel = new VideoModel("Video One", "https://i.stack.imgur.com/h6viz.gif", 230, "Accepted", 345);
+        VideoModel videoModel = new VideoModel("Video One", "https://i.stack.imgur.com/h6viz.gif", 230, "Accepted", 345, 23, 6, 2014);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Two", "https://i.stack.imgur.com/h6viz.gif", 0, "Declined", 0);
+        videoModel = new VideoModel("Video Two", "https://i.stack.imgur.com/h6viz.gif", 0, "Declined", 0, 8, 5, 2019);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Three", "https://i.stack.imgur.com/h6viz.gif", 3467, "Accepted",  3123);
+        videoModel = new VideoModel("Video Three", "https://i.stack.imgur.com/h6viz.gif", 3467, "Accepted",  3123, 11, 4, 2016);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Four", "https://i.stack.imgur.com/h6viz.gif", 0, "Declined", 0);
+        videoModel = new VideoModel("Video Four", "https://i.stack.imgur.com/h6viz.gif", 0, "Declined", 0, 16, 9, 2011);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Five", "https://i.stack.imgur.com/h6viz.gif", 126, "Accepted", 542);
+        videoModel = new VideoModel("Video Five", "https://i.stack.imgur.com/h6viz.gif", 126, "Accepted", 542, 31, 1, 2017);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Six", "https://i.stack.imgur.com/h6viz.gif", 3467, "Accepted", 876);
+        videoModel = new VideoModel("Video Six", "https://i.stack.imgur.com/h6viz.gif", 3467, "Accepted", 876, 22, 8, 2010);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Seven", "https://i.stack.imgur.com/h6viz.gif", 0, "Declined", 0);
+        videoModel = new VideoModel("Video Seven", "https://i.stack.imgur.com/h6viz.gif", 0, "Declined", 0, 12, 9, 2012);
         videos.add(videoModel);
-        videoModel = new VideoModel("Video Eight", "https://i.stack.imgur.com/h6viz.gif", 265, "Accepted", 987);
+        videoModel = new VideoModel("Video Eight", "https://i.stack.imgur.com/h6viz.gif", 265, "Accepted", 987, 9, 9, 2019);
         videos.add(videoModel);
     }
 }

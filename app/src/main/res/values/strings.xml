@@ -26,4 +26,13 @@
     <string name="total_videos">Total Videos</string>
     <string name="novideo_holder">23</string>
     <string name="vddetails">Details</string>
+
+    <string name="sort_date">Sort by Date</string>
+    <string name="sort_month">Sort by Month</string>
+    <string name="sort_year">Sort by Year</string>
+
+    <string name="video_name">Name the Video</string>
+    <string name="videoupload">Upload Video</string>
+    <string name="choose_file">Browse</string>
+    <string name="file_choosen">No file chosen</string>
 </resources>

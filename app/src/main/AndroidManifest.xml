@@ -19,5 +19,7 @@
         </activity>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".VideoUploadActivity"/>
+        <activity android:name=".VideoDetailActivity"/>
     </application>
 </manifest>

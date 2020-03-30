@@ -47,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigation);
         fab = findViewById(R.id.fab_add);
 
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, VideoUploadActivity.class);
+                startActivity(intent);
+            }
+        });
+
         setUpNavigationView();
         if(savedInstanceState == null) {
             navIndex = 0;

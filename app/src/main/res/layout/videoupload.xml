@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@android:color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/Relative_1"
@@ -36,33 +36,61 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_login"
+            android:src="@drawable/ic_picture"
             android:layout_centerInParent="true"/>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/Relative_3"
+        app:layout_constraintTop_toBottomOf="@id/Relative_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Relative_2"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginTop="20dp">
+        android:layout_margin="30dp">
 
-        <TextView
-            android:id="@+id/tview_email"
+        <RelativeLayout
+            android:id="@+id/Relative_3_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_mail"
-            android:fontFamily="@font/altoy_font"
-            android:textSize="20sp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"/>
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/file_choosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/file_choosen"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/choose_file"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@android:color/transparent"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:text="@string/choose_file"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_dark" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/video_name"
+            android:layout_below="@id/Relative_3_1"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/altoy_font"/>
 
         <EditText
-            android:id="@+id/etext_email"
-            android:layout_below="@id/tview_email"
+            android:id="@+id/vdname_add"
+            android:layout_below="@id/video_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -72,56 +100,25 @@
             android:paddingBottom="10dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
-
-        <TextView
-            android:id="@+id/tview_password"
-            android:layout_below="@id/etext_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login_password"
-            android:fontFamily="@font/altoy_font"
-            android:textSize="20sp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="20dp" />
-
-        <EditText
-            android:id="@+id/etext_password"
-            android:layout_below="@id/tview_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:textSize="20sp"
-            android:background="@drawable/textbox"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:textColor="@android:color/black"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/Relative_4"
-        app:layout_constraintTop_toBottomOf="@id/Relative_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp">
 
         <Button
-            android:id="@+id/Button_1"
+            android:id="@+id/Button_upload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/vdname_add"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
             android:padding="10dp"
-            android:text="@string/login"
+            android:text="@string/videoupload"
             android:textColor="@android:color/black"
             android:textSize="15sp"
+            android:textAllCaps="false"
             android:background="@drawable/textbox"
             style="?android:attr/borderlessButtonStyle"
-            android:drawableStart="@drawable/ic_loginicon" />
+            android:drawableStart="@drawable/ic_upload" />
 
     </RelativeLayout>
 

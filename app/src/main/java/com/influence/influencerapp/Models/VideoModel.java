@@ -6,13 +6,19 @@ public class VideoModel {
     private double likes;
     private String status;
     private int earning;
+    private int date;
+    private int month;
+    private int year;
 
-    public VideoModel(String videoname, String thumburl, double likes, String status, int earning) {
+    public VideoModel(String videoname, String thumburl, double likes, String status, int earning, int date, int month, int year) {
         this.videoname = videoname;
         this.thumburl = thumburl;
         this.likes = likes;
         this.status = status;
         this.earning = earning;
+        this.date = date;
+        this.month = month;
+        this.year = year;
     }
 
     public void setVideoname(String videoname) {
@@ -48,5 +54,26 @@ public class VideoModel {
     }
     public int getEarning() {
         return earning;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+    public int getDate() {
+        return date;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+    public int getMonth() {
+        return month;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+    public int getYear() {
+        return year;
     }
 }

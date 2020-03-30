@@ -82,6 +82,25 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/Relative_1_1_2"
+                android:layout_below="@id/Relative_1_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/upload_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:text="Uploaded On :"/>
+
+            </RelativeLayout>
+
         </RelativeLayout>
 
     </RelativeLayout>
