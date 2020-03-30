@@ -1,4 +1,5 @@
 # Influenca
+![Github Contributors](https://img.shields.io/github/contributors/Abhishek-Kathayat/Influenca)
 
 ### Introduction
 A Simple Influencer App which was developed by me as an Internship assignment.<br/>
