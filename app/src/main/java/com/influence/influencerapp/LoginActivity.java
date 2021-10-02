@@ -22,12 +22,60 @@ public class LoginActivity extends AppCompatActivity {
         Shader textShader = new LinearGradient(0, 0, 0, textView.getTextSize(), new int[]{Color.BLUE, Color.RED}, new float[]{0, 1}, Shader.TileMode.MIRROR);
         textView.getPaint().setShader(textShader);
 
+        auth = FirebaseAuth.getInstance();
+
+        if(auth.getCurrentUser() != null) {
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
+
+        auth = FirebaseAuth.getInstance();
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                String email = inputmail.getText().toString();
+                final String password = inputpassword.getText().toString();
+
+                if(TextUtils.isEmpty(email)) {
+                    Toast.makeText(getApplicationContext(), "Enter a valid E-mail", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "Enter a Password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(!task.isSuccessful()) {
+                            if(password.length() < 6) {
+                                inputpassword.setError(getString(R.string.minimum_password));
+                            }
+                            else {
+                                Toast.makeText(LoginActivity.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();;
+                            }
+                        }
+                        else {
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                });
             }
         });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startsignupfunction();
+            }
+        });
+    }
+    protected void startsignupfunction() {
+        Intent in = new Intent(this.getApplicationContext(), SignupActivity.class);
+        startActivity(in);
     }
 }
