@@ -6,6 +6,11 @@
     <string name="login_password">Password</string>
     <string name="login">Login</string>
 
+    <string name="signUpUserName">Username</string>
+    <string name="signUpEmail">Email</string>
+    <string name="signUpPassword">Password</string>
+    <string name="signUp">Sign Up</string>
+
     <string name="nav_home">Home</string>
     <string name="nav_profile">Profile</string>
     <string name="nav_settings">Settings</string>
