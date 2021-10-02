@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/Relative_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TextView_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_name"
+            android:fontFamily="@font/altoy_font"
+            android:textColor="@android:color/black"
+            android:textSize="35sp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Relative_2"
+        app:layout_constraintTop_toBottomOf="@id/Relative_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_picture"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Relative_3"
+        app:layout_constraintTop_toBottomOf="@id/Relative_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+        <RelativeLayout
+            android:id="@+id/Relative_3_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/file_choosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/file_choosen"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/choose_file"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@android:color/transparent"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:text="@string/choose_file"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_blue_dark" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/image_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/image_name"
+            android:layout_below="@id/Relative_3_1"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/altoy_font"/>
+
+        <EditText
+            android:id="@+id/vdname_add"
+            android:layout_below="@id/image_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:background="@drawable/textbox"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/Button_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vdname_add"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:padding="10dp"
+            android:text="@string/imageupload"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:background="@drawable/textbox"
+            style="?android:attr/borderlessButtonStyle"
+            android:drawableStart="@drawable/ic_upload" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
